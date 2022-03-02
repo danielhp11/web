@@ -1,0 +1,107 @@
+{% extends 'layout.html'%}
+{% load static %}
+{% block navegador %}
+<li class=" " ><a class=" " href="{% url 'index' %}"><h3 class="text-light" >Inicio</h3></a></li>
+{% endblock %}
+{% block content %}
+<div class="simulador"><!--simulador-->
+  <h1 class="text-white text-center "  >Conoce nuestro modelo de negocio</h1><br><br>
+  <!---->
+  <div class="container d-flex align-items-center justify-content-center">
+    <div class=" row row-cols-2 ">
+      
+      <div class="col"><!--NUMERO DE PLANTAS-->
+        <label class="text-white" >Número de plantas</label>
+        <input class="form-control" type="number" id="plantaT" oninput="inversion()" onchange="inversion()" value="1" min="1" max="100000" />             
+      </div><!--FIN NUMERO DE PLANTAS-->
+
+      <div class="col"><!--PRECIO-->
+        <label class="text-white" >Precio (MXN)</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="precio" name="precio" value="110.00" oninput="inversion()" disabled/>   
+        </div>                
+      </div><!--FIN PRECIO-->
+
+      <div class="col"><!--COSECHA A :-->
+        <label class="text-white" >Cosecha a :</label>
+        <div class="input-group mb-3">
+            <label class="input-group-text m-1" for="inputGroupSelect01">Meses :</label>
+            <select oninput="range()" onchange="inversion()" class="form-control" id="cosecha" name="cosecha">
+              <option value="3">3 años (15kg)</option>
+              <option value="4">4 años (25kg)</option>
+              <option value="5">5 años (35kg)</option>
+            </select>
+        </div> 
+      </div><!--FIN COSECHA A-->
+
+      <div class="col "><!--PRECIO POR KILO-->
+        <label class="text-white" >Precio por kilo: (MXN)</label>
+        <div class="input-group ">
+            <span class="input-group-text">$</span><input type="text" class="form-control" id="kilo"  value="22.00" oninput="cal()" disabled/>
+        </div>    
+      </div><!--PRECIO POR KILO-->
+
+      <div class="col"><!--TOTAL INVERSION-->
+        <label class="text-white" >Total inversión :</label>
+        <div class="input-group mb-1">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="inversion" placeholder="Total inversión" disabled/>              
+        </div>                   
+      </div><!--FIN TOTAL INVERSION-->
+
+      <div class="col "><!--UTILIDAD BRUTA-->
+        <label class="text-white" >Utilidad bruta</label>
+        <div class="input-group mb-1">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="bruta" placeholder="Utilidad bruta" disabled/>
+        </div>                    
+      </div><!--FIN UTILIDAD BRUTA-->
+      
+      <div class="col"><!--UTILIDAD POR PLANTA-->
+        <label class="text-white" >Utilidad por planta</label>
+        <div class="input-group mb-1">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="utilidadPlanta" placeholder="Utilidad por planta" disabled/> 
+        </div>                  
+      </div><!--FIN UTILIDAD POR PLANTA-->
+
+      <div class="col "><!--UTILIDAD NETA-->
+        <label class="text-white" >Utilidad neta</label>
+        <div class="input-group mb-1">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="utilidadNeta" placeholder="Utilidad neta" disabled/>
+        </div>                 
+        
+      </div><!--FIN UTILIDAD NETA-->
+      
+      <div class="col"><!--UTILIDAD DIARIA-->
+        <label class="text-white" >Utilidad diario</label>
+        <div class="input-group mb-1">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="utilidadDiaria" value="27.12" placeholder="Utilidad por diaria" disabled/> 
+        </div>  
+      </div><!--FIN UTILIDAD DIARIA-->
+
+      <div class="col"><!--COMISION AGAVEROS-->
+        <label class="text-white" >Comisión agaveros</label>
+        <div class="input-group mb-1">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="comision" value="27.12" placeholder="Comisión agaveros" disabled/>                  
+        </div>  
+      </div><!--FIN COMISION AGAVEROS-->
+
+      <div class="col"><!--UTILIDAD ANUAL-->
+        <label class="text-white" >Utilidad anual</label>
+        <div class="input-group mb-1">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="utilidadAnual"  placeholder="Utilidad anual" disabled/>                
+        </div>                
+      </div><!--FIN UTILIDAD ANUAL-->
+
+    
+    </div>
+  </div>
+  <!---->
+</div><br>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'layout.html'%}
+{% load static %}
+{% block navegador %}
+<li class=" " ><a class=" " href="{% url 'index' %}"><h3 class="text-light" >Inicio</h3></a></li>
+{% endblock %}
+{% block content %}
+
+<div class="session" >
+    <form action="{% url 'registro' %}" method="POST">
+      {% csrf_token %}
+      <div class="mb-3 mt-3">
+        <label for="text">Nombre de usuario:</label><br>
+        <input type="text" class="form-control"  placeholder="Ingresa tú nómbre de usuario" name="username">
+        
+      </div>
+      <div class="mb-3 mt-3">
+          <label for="email">Correo:</label><br>          
+          <input type="email" class="form-control"  placeholder="Ingresa tú correo" name="email">
+        </div>
+      <div class="mb-3 mt-3">
+          <label for="number">Teléfono:</label><br>          
+          <input type="number" class="form-control"  placeholder="Ingresa tú número teléfonico" name="first_name">
+      </div>
+      <div class="mb-3">
+        <label for="pwd">Contraseña:</label><br>        
+        <input type="password" class="form-control"  placeholder="Ingresa tú contraseña" name="password1">
+      </div>
+      <div class="mb-3">
+          <label for="pwd">Repite la contraseña:</label><br>          
+          <input type="password" class="form-control"  placeholder="Repite tú contraseña" name="password2">
+      </div>
+      <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>  
+    <h4 class="text-white">Por seguridad no mostramos la contraseña, asegurate de escribirla bien</h4>
+              
+</div>
+<br><br><br><br><br><br><br><br>
+{% endblock %}

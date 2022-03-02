@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% load static %}
+{% block navegador %}
+<li class="" ><a class="" href="#cuiagv" ><h3 class="text-light" >Cómo funciona</h3></a></li>
+{% endblock %}
+
+{% block content %}
+<div class="eslogan" >
+    <div class="text">
+        <p>Cultivamos tú </p>
+        <p>
+          <span class="word wisteria" style="margin;auto;" >Inversión</span>
+          <span class="word wisteria" style="margin;auto;" >Agave</span>
+        </p>
+    </div>
+</div>
+
+<div class="mx-auto" style="margin: 4%;" id="cuiagv">
+
+  <div class="container mt-9">
+    <div class="row">
+      <span class="border-top border-1"></span>
+      <h1 class="display-1 text-white">Conoce el proceso de:</h1>
+    </div>
+  </div>
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="image_1"><img src="{% static 'img/seleccion.jpeg' %}"></div>
+        </div>
+        <div class="col-sm-8">
+          <h1 class="display-3 text-white">1.- Selección</h1>
+          <p class="display-5 text-white ">Producimos, seleccionamos y clasificamos los mejores hijuelos, para hacer la plantación en terrenos accesibles con las propiedades necesarias para cultivar agave de calidad, estos terrenos están dentro de la Denominación de Origen.</p>
+        </div>
+        <span class="border-bottom border-1"></span>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1 class="display-3 text-white ">2.- Cuidado</h1>
+          <p class="display-5 text-white ">Nuestro compromiso es producir agave de calidad, por lo tanto, todas nuestras plantaciones están supervisadas por los mejores ingenieros y son trabajadas por personal altamente capacitado, siempre buscando tener los mejores rendimientos.</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="image_1"><img src="{% static 'img/cuidado.jpeg' %}"></div>
+        </div>
+        <span class="border-bottom border-1"></span>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="image_1"><img src="{% static 'img/venta.jpeg' %}"></div>
+        </div>
+        <div class="col-sm-8">
+          <h1 class="display-3 text-white ">3.- Venta</h1>
+          <p class="display-5 text-white ">Se esta monitoreando de manera constante el mercado, para predecir y elegir el mejor momento para la venta del agave.</p>
+        </div>
+        <span class="border-bottom border-1"></span>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1 class="display-3 text-white ">4.- Utilidad</h1>
+          <p class="display-5 text-white ">Durante varios años cuidamos tu inversión para que al momento final obtengas tu utilidad con los mejores rendimientos.</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="image_1"><img src="{% static 'img/utilidad.jpeg' %}"></div>
+        </div>
+        <span class="border-bottom border-1"></span>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

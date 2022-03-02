@@ -1,0 +1,41 @@
+.session{
+    margin: auto;
+    color: #fff;
+    width: 40%;
+    height: 600px;
+    margin-top: -60%;
+    position: relative;
+    z-index: 10;
+}
+.session label, .session form p, .session form ul li{
+    color: #fff;
+
+}
+.registro label, .registro form p, .registro form ul li{
+    color: #fff;
+
+}
+@media screen and (max-width:820px) {
+/* -------------------------------------------------------------------
+* ## NAVEGADOR responsivo
+* ------------------------------------------------------------------- */
+    .session{
+        margin-top: -100%;
+    }
+}
+@media screen and (max-width:420px) {
+/* -------------------------------------------------------------------
+* ## NAVEGADOR responsivo
+* ------------------------------------------------------------------- */
+    .session{
+        margin-top: -180%;
+    }
+}
+@media screen and (max-width:380px) {
+/* -------------------------------------------------------------------
+* ## NAVEGADOR responsivo
+* ------------------------------------------------------------------- */
+    .session{
+        margin-top: -150%;
+    }
+}
